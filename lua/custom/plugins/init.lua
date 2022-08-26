@@ -18,4 +18,9 @@ return {
       require "custom.plugins.lspconfig"
     end,
   },
+  ["ellisonleao/glow.nvim"] = {
+    config = function()
+      require("custom.plugins.glow").setup()
+    end,
+  },
 }

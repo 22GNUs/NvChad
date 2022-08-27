@@ -1,6 +1,6 @@
 return {
   ["goolord/alpha-nvim"] = {
-    disable = false,
+    disable = true,
     cmd = "Alpha",
   },
   ["folke/which-key.nvim"] = {

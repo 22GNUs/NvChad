@@ -24,7 +24,6 @@ M.mason = {
     "gopls",
 
     -- shell
-    "shfmt",
     "shellcheck",
   },
 }

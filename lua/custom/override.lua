@@ -17,9 +17,6 @@ M.mason = {
     "lua-language-server",
     "stylua",
 
-    -- web dev
-    "json-lsp",
-
     -- go
     "gopls",
 

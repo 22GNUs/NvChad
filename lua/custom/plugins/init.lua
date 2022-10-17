@@ -1,4 +1,14 @@
+local override = require "custom.override"
+
 return {
+  ["nvim-treesitter/nvim-treesitter"] = {
+    override_options = override.treesitter,
+  },
+
+  ["williamboman/mason.nvim"] = {
+    override_options = override.mason,
+  },
+
   ["goolord/alpha-nvim"] = {
     disable = true,
     cmd = "Alpha",

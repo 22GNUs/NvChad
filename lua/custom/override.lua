@@ -15,14 +15,18 @@ M.mason = {
   ensure_installed = {
     -- lua stuff
     "lua-language-server",
+
     "stylua",
+
+    -- typescript
+    "typescript-language-server",
 
     -- go
     "gopls",
 
     -- shell
     "shellcheck",
-  },
+  }
 }
 
 return M

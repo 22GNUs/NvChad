@@ -17,6 +17,10 @@ local sources = {
 
   -- Golang
   b.formatting.gofmt,
+
+  -- Es
+  b.formatting.eslint_d,
+  b.diagnostics.eslint_d
 }
 
 local M = {}

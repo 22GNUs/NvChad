@@ -21,6 +21,9 @@ M.mason = {
     -- typescript
     "typescript-language-server",
 
+    -- python
+    "python-language-server",
+
     -- go
     "gopls",
 

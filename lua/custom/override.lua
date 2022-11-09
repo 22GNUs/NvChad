@@ -22,13 +22,16 @@ M.mason = {
     "typescript-language-server",
 
     -- python
-    "python-language-server",
+    "python-lsp-server",
 
     -- go
     "gopls",
 
     -- shell
     "shellcheck",
+
+    -- json
+    "json-lsp"
   }
 }
 

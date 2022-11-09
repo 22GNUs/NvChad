@@ -19,8 +19,8 @@ local sources = {
   b.formatting.gofmt,
 
   -- Es
-  b.formatting.eslint_d,
-  b.diagnostics.eslint_d
+  b.formatting.eslint,
+  b.diagnostics.eslint
 }
 
 local M = {}

@@ -1,6 +1,8 @@
 local override = require "custom.override"
 
 return {
+  ["wakatime/vim-wakatime"] = {},
+
   ["nvim-treesitter/nvim-treesitter"] = {
     override_options = override.treesitter,
   },
@@ -27,5 +29,5 @@ return {
       require "plugins.configs.lspconfig"
       require "custom.plugins.lspconfig"
     end,
-  },
+  }
 }

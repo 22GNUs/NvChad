@@ -15,6 +15,10 @@ return {
     override_options = override.nvterm,
   },
 
+  ["lukas-reineke/indent-blankline.nvim"] = {
+    override_options = override.blankline,
+  },
+
   ["goolord/alpha-nvim"] = {
     disable = true,
     cmd = "Alpha",

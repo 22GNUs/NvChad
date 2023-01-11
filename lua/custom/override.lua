@@ -31,8 +31,27 @@ M.mason = {
     "shellcheck",
 
     -- json
-    "json-lsp"
-  }
+    "json-lsp",
+  },
+}
+
+M.nvterm = {
+  terminals = {
+    type_opts = {
+      float = {
+        relative = "editor",
+        -- 上边距
+        row = 0.18,
+        -- 左边距
+        col = 0.12,
+        width = 0.75,
+        height = 0.6,
+        border = "single",
+      },
+      horizontal = { location = "rightbelow", split_ratio = 0.3 },
+      vertical = { location = "rightbelow", split_ratio = 0.5 },
+    },
+  },
 }
 
 return M

@@ -3,6 +3,15 @@ local override = require "custom.override"
 return {
   ["wakatime/vim-wakatime"] = {},
 
+  ["beauwilliams/focus.nvim"] = {
+    config = function()
+      require("focus").setup()
+    end,
+    setup = function()
+      require("core.utils").load_mappings "focus"
+    end,
+  },
+
   ["nvim-treesitter/nvim-treesitter"] = {
     override_options = override.treesitter,
   },

@@ -22,24 +22,29 @@ M.general = {
 
 M.focus = {
   n = {
-    ["<leader>ch"] = {
+    ["<leader>wh"] = {
       ":FocusSplitLeft<CR>",
       "focus left",
       opts = { silent = true },
     },
-    ["<leader>cj"] = {
+    ["<leader>wj"] = {
       ":FocusSplitDown<CR>",
       "focus left",
       opts = { silent = true },
     },
-    ["<leader>ck"] = {
+    ["<leader>wk"] = {
       ":FocusSplitUp<CR>",
       "focus left",
       opts = { silent = true },
     },
-    ["<leader>cl"] = {
+    ["<leader>wl"] = {
       ":FocusSplitRight<CR>",
       "focus left",
+      opts = { silent = true },
+    },
+    ["<leader>wn"] = {
+      ":FocusSplitNicely<CR>",
+      "focus nicely",
       opts = { silent = true },
     },
   },

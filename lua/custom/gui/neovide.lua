@@ -17,4 +17,13 @@ if g.neovide ~= nil then
   g.neovide_cursor_vfx_mode = "railgun"
   g.neovide_cursor_vfx_particle_phase = 1.5
   g.neovide_cursor_vfx_particle_curl = 1.0
+
+  -- fix neovide system clipboard
+  -- in macos, c means <ctrl>, D means <cmd>
+  vim.cmd 'nmap <D-c> "+y'
+  vim.cmd 'vmap <D-c> "+y'
+  vim.cmd 'nmap <D-v> "+p'
+  -- in normal mode <c-r> will open reigster
+  vim.cmd "inoremap <D-v> <c-r>+"
+  vim.cmd "cnoremap <D-v> <c-r>+"
 end

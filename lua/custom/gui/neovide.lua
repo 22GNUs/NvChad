@@ -1,9 +1,9 @@
 local g = vim.g
 if g.neovide ~= nil then
   vim.opt.guifont = { "Iosevka Mayukai Original", ":h18" }
-  g.neovide_transparency = 0.0
-  g.transparency = 0.98
-  vim.cmd "let g:neovide_background_color = '#16161f'.printf('%x', float2nr(255 * g:transparency))"
+  -- g.neovide_transparency = 0.0
+  -- g.transparency = 0.98
+  -- vim.cmd "let g:neovide_background_color = '#16161f'.printf('%x', float2nr(255 * g:transparency))"
   g.neovide_refresh_rate = 60
   g.neovide_hide_mouse_when_typing = true
   g.neovide_remember_dimensions = true

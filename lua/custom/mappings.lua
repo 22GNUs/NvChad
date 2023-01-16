@@ -62,4 +62,14 @@ M.nvterm = {
   },
 }
 
+M.symbles_outline = {
+  n = {
+    ["<leader>so"] = {
+      ":SymbolsOutline<CR>",
+      "toggle symbols",
+      opts = { silent = true },
+    },
+  },
+}
+
 return M

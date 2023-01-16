@@ -3,6 +3,15 @@ local override = require "custom.override"
 return {
   ["wakatime/vim-wakatime"] = {},
 
+  ["simrat39/symbols-outline.nvim"] = {
+    config = function()
+      require("custom.plugins.symbols-outline").setup()
+    end,
+    setup = function()
+      require("core.utils").load_mappings "symbols-outline"
+    end,
+  },
+
   ["beauwilliams/focus.nvim"] = {
     config = function()
       require("focus").setup()

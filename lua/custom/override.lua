@@ -84,4 +84,10 @@ M.blankline = function()
   }
 end
 
+M.telescope = {
+  defaults = {
+    prompt_prefix = "   ",
+  },
+}
+
 return M

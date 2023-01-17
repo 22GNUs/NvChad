@@ -1,6 +1,7 @@
 local override = require "custom.override"
 
 return {
+  -- custom plugins
   ["wakatime/vim-wakatime"] = {},
 
   ["simrat39/symbols-outline.nvim"] = {
@@ -21,6 +22,15 @@ return {
     end,
   },
 
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require("custom.plugins.null-ls").setup()
+    end,
+  },
+
+  -- override plugins
+
   ["nvim-treesitter/nvim-treesitter"] = {
     override_options = override.treesitter,
   },
@@ -37,20 +47,8 @@ return {
     override_options = override.blankline,
   },
 
-  ["goolord/alpha-nvim"] = {
-    disable = true,
-    cmd = "Alpha",
-  },
-
-  ["folke/which-key.nvim"] = {
-    disable = false,
-  },
-
-  ["jose-elias-alvarez/null-ls.nvim"] = {
-    after = "nvim-lspconfig",
-    config = function()
-      require("custom.plugins.null-ls").setup()
-    end,
+  ["nvim-telescope/telescope.nvim"] = {
+    override_options = override.telescope,
   },
 
   ["neovim/nvim-lspconfig"] = {
@@ -58,5 +56,14 @@ return {
       require "plugins.configs.lspconfig"
       require "custom.plugins.lspconfig"
     end,
+  },
+
+  ["goolord/alpha-nvim"] = {
+    disable = true,
+    cmd = "Alpha",
+  },
+
+  ["folke/which-key.nvim"] = {
+    disable = false,
   },
 }

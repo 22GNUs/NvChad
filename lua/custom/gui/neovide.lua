@@ -3,7 +3,7 @@ if g.neovide ~= nil then
   vim.opt.guifont = { "Iosevka Mayukai Original", ":h18" }
   -- g.neovide_transparency = 0.0
   -- g.transparency = 0.98
-  -- vim.cmd "let g:neovide_background_color = '#16161f'.printf('%x', float2nr(255 * g:transparency))"
+  -- vim.cmd "let g:neovide_background_color = '#11121D'.printf('%x', float2nr(255 * g:transparency))"
   g.neovide_fullscreen = true
   g.neovide_scroll_animation_length = 0.6
   g.neovide_no_idle = true
@@ -11,6 +11,9 @@ if g.neovide ~= nil then
   g.neovide_hide_mouse_when_typing = true
   g.neovide_remember_dimensions = true
   g.neovide_remember_window_size = true
+
+  -- transparency
+  g.neovide_floating_opacity = 0.7
   g.neovide_floating_blur_amount_x = 2.0
   g.neovide_floating_blur_amount_y = 2.0
   -- vfx mode

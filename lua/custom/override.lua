@@ -55,12 +55,14 @@ M.nvterm = {
 }
 
 M.blankline = function()
-  vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
-  vim.cmd [[highlight IndentBlanklineIndent2 guifg=#C097FC gui=nocombine]]
-  vim.cmd [[highlight IndentBlanklineIndent3 guifg=#56B6C2 gui=nocombine]]
-  vim.cmd [[highlight IndentBlanklineIndent4 guifg=#98C379 gui=nocombine]]
-  vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
-  vim.cmd [[highlight IndentBlanklineIndent6 guifg=#E5C07B gui=nocombine]]
+  -- get colors from global theme table
+  local colors = require("base46").get_theme_tb "base_30"
+  vim.cmd(string.format([[highlight IndentBlanklineIndent1 guifg=%s gui=nocombine]], colors.red))
+  vim.cmd(string.format([[highlight IndentBlanklineIndent2 guifg=%s gui=nocombine]], colors.purple))
+  vim.cmd(string.format([[highlight IndentBlanklineIndent3 guifg=%s gui=nocombine]], colors.cyan))
+  vim.cmd(string.format([[highlight IndentBlanklineIndent4 guifg=%s gui=nocombine]], colors.green))
+  vim.cmd(string.format([[highlight IndentBlanklineIndent5 guifg=%s gui=nocombine]], colors.blue))
+  vim.cmd(string.format([[highlight IndentBlanklineIndent6 guifg=%s gui=nocombine]], colors.yellow))
 
   -- vim.opt.list = true
   -- vim.opt.listchars:append "space:⋅"

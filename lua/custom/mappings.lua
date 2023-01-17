@@ -9,7 +9,7 @@ M.general = {
     ["<leader>ss"] = {
       ":source % <CR>",
       "source current",
-      opts = { silent = false },
+      opts = { silent = true },
     },
     ["<leader>lg"] = {
       function()

@@ -9,7 +9,7 @@ return {
       require("custom.plugins.symbols-outline").setup()
     end,
     setup = function()
-      require("core.utils").load_mappings "symbols-outline"
+      require("core.utils").load_mappings "symbles_outline"
     end,
   },
 

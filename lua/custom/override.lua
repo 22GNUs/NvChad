@@ -63,12 +63,6 @@ M.blankline = function()
   vim.cmd(string.format([[highlight IndentBlanklineIndent4 guifg=%s gui=nocombine]], colors.green))
   vim.cmd(string.format([[highlight IndentBlanklineIndent5 guifg=%s gui=nocombine]], colors.blue))
   vim.cmd(string.format([[highlight IndentBlanklineIndent6 guifg=%s gui=nocombine]], colors.yellow))
-
-  -- vim.opt.list = true
-  -- vim.opt.listchars:append "space:⋅"
-  -- vim.opt.listchars:append "trail:⋅"
-  -- vim.opt.listchars:append "eol:↴"
-
   return {
     space_char_blankline = " ",
     show_current_context = true,

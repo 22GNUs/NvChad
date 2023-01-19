@@ -1,7 +1,19 @@
-local present, _ = pcall(require, "luasnip")
+local load_override = require("core.utils").load_override
+local present, luasnip = pcall(require, "luasnip")
 if not present then
   return
 end
+
+local options = {
+  history = true,
+  updateevents = "TextChanged,TextChangedI",
+}
+
+options = load_override(options, "L3MON4D3/LuaSnip")
+luasnip.config.set_config(options)
+require("luasnip.loaders.from_vscode").lazy_load { paths = vim.g.luasnippets_path or "" }
+require("luasnip.loaders.from_vscode").lazy_load()
+
 -- Default "InsertLeave" is not working, delete it and rebinding "ModeChanged"
 -- See: https://www.reddit.com/r/neovim/comments/um7p7u/nvim_nvimcmp_luasnip_jumps_to_previous_snippets/
 -- See: https://github.com/L3MON4D3/LuaSnip/issues/258

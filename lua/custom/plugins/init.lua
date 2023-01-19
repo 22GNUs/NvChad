@@ -53,7 +53,8 @@ return {
 
   ["L3MON4D3/LuaSnip"] = {
     config = function()
-      require("plugins.configs.others").luasnip()
+      -- override default behavior unbind InsertLeave
+      -- require("plugins.configs.others").luasnip()
       require "custom.plugins.luasnip"
     end,
   },

@@ -4,6 +4,10 @@ return {
   -- custom plugins
   ["wakatime/vim-wakatime"] = {},
 
+  -- codeium ai complete
+  -- run :Codeium Auth first
+  ["Exafunction/codeium.vim"] = {},
+
   ["simrat39/symbols-outline.nvim"] = {
     config = function()
       require("custom.plugins.symbols-outline").setup()

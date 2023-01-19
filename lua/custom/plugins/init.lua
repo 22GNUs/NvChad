@@ -51,6 +51,10 @@ return {
     override_options = override.telescope,
   },
 
+  ["hrsh7th/nvim-cmp"] = {
+    override_options = override.cmp,
+  },
+
   ["L3MON4D3/LuaSnip"] = {
     config = function()
       -- override default behavior unbind InsertLeave

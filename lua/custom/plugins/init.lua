@@ -51,6 +51,13 @@ return {
     override_options = override.telescope,
   },
 
+  ["L3MON4D3/LuaSnip"] = {
+    config = function()
+      require("plugins.configs.others").luasnip()
+      require "custom.plugins.luasnip"
+    end,
+  },
+
   ["neovim/nvim-lspconfig"] = {
     config = function()
       require "plugins.configs.lspconfig"

@@ -11,6 +11,12 @@ local options = {
 
 options = load_override(options, "L3MON4D3/LuaSnip")
 luasnip.config.set_config(options)
+-- See https://github.com/L3MON4D3/LuaSnip/issues/525
+luasnip.setup {
+  region_check_events = "CursorHold,InsertLeave,InsertEnter",
+  -- those are for removing deleted snippets, also a common problem
+  delete_check_events = "TextChanged,InsertEnter",
+}
 require("luasnip.loaders.from_vscode").lazy_load { paths = vim.g.luasnippets_path or "" }
 require("luasnip.loaders.from_vscode").lazy_load()
 

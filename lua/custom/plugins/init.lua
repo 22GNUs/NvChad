@@ -55,6 +55,11 @@ return {
     override_options = override.cmp,
   },
 
+  ["folke/which-key.nvim"] = {
+    disable = false,
+    override_options = override.whichkey,
+  },
+
   ["L3MON4D3/LuaSnip"] = {
     config = function()
       -- override default behavior unbind InsertLeave
@@ -73,9 +78,5 @@ return {
   ["goolord/alpha-nvim"] = {
     disable = true,
     cmd = "Alpha",
-  },
-
-  ["folke/which-key.nvim"] = {
-    disable = false,
   },
 }

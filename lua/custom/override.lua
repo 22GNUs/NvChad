@@ -1,3 +1,4 @@
+local transparency = require("custom.settings").transparency
 local M = {}
 
 M.treesitter = {
@@ -78,11 +79,14 @@ M.blankline = function()
   }
 end
 
-M.telescope = {
-  defaults = {
-    prompt_prefix = "   ",
-  },
-}
+M.telescope = function()
+  return {
+    defaults = {
+      prompt_prefix = "   ",
+      winblend = transparency.winblend(),
+    },
+  }
+end
 
 M.cmp = function()
   local present, cmp = pcall(require, "cmp")
@@ -104,6 +108,14 @@ M.cmp = function()
         "i",
         "s",
       }),
+    },
+  }
+end
+
+M.whichkey = function()
+  return {
+    window = {
+      winblend = transparency.winblend(),
     },
   }
 end

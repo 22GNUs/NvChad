@@ -1,6 +1,7 @@
 local g = vim.g
+local o = vim.opt
 if g.neovide ~= nil then
-  vim.opt.guifont = { "Iosevka Mayukai Original", ":h18" }
+  o.guifont = { "Iosevka Mayukai Original", ":h18" }
   -- g.neovide_fullscreen = true
   g.neovide_scroll_animation_length = 0.6
   g.neovide_no_idle = true
@@ -10,13 +11,13 @@ if g.neovide ~= nil then
   g.neovide_remember_window_size = true
 
   -- transparency
-  g.transparency = false
   -- have bugs when --multigrid enable, disable for now, see https://github.com/neovide/neovide/issues/720
-  -- g.neovide_transparency = 0.0
-  -- g.transparency = 0.97
-  -- g.neovide_floating_opacity = 0.5
-  -- local colors = require("base46").get_theme_tb "base_30"
-  -- vim.cmd("let g:neovide_background_color = '" .. colors.black .. "'.printf('%x', float2nr(255 * g:transparency))")
+  if g.transparency then
+    g.neovide_transparency = 0.0
+    g.transparency = 0.97
+    local colors = require("base46").get_theme_tb "base_30"
+    vim.cmd("let g:neovide_background_color = '" .. colors.black .. "'.printf('%x', float2nr(255 * g:transparency))")
+  end
 
   -- blur
   g.neovide_floating_blur_amount_x = 2.0
